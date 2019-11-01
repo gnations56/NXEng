@@ -7,7 +7,13 @@
 
 
 class AudioManager {
-
+public:
+  AudioManager();
+  void AudioManager::LoadMusicFromFile(std::string name, std::string path);
+  void AudioManager::LoadSFXFromFile(std::string name, std::string path);
+private:
+  std::map<std::string,Mix_Music*> music_list;
+  std::map<std::string,Mix_Chunk> sfx_list;
 };
 
 

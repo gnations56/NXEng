@@ -14,7 +14,7 @@ AnimatedGameObject(std::string animation_name, int max_frames, int frame_width, 
 }
 void AnimatedGameObject::Animate()
 {
-  
+  TextureManager::DrawFullTexture(animation.find(frame_number)->first);
 }
 void AnimatedGameObject::UpdateSheet(SDL_Texture* sheet)
 {
@@ -37,6 +37,7 @@ void AnimatedGameObject::UpdateSheet(SDL_Texture* sheet)
     SDL_RenderClear(this->game_object->renderer);
     this->animation.insert(new std::pair<int,SDL_Texture*>(i,frame));
   }
+  SDL_DestroyTexture(frame);
 }
 void AnimatedGameObject::SetFrameNumber(int frame_number)
 {
