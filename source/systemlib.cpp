@@ -38,4 +38,3 @@ bool CheckFeatureActive(int feature)
         return false;
         }
 }
-

@@ -12,3 +12,6 @@
 #include "joystick.h"
 #include <string>
 #include <map>
+
+bool InitSDL(int sdl_features);
+bool CheckFeatureActive(int feature);

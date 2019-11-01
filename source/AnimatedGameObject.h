@@ -16,8 +16,12 @@ public:
     void AnimatedGameObject::SetFrameNumber(int frame_number);
 protected:
     std::map<int,SDL_Texture*> animation;
+    SDL_Texture* render_texture_target;
     int frame_number;
+    int frame_width;
+    int frame_height;
     int total_frames;
+    int current_frame;
     GameObject game_object;
 };
 
