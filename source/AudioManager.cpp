@@ -31,7 +31,7 @@
 
 void AudioManager::PauseMusic(std::string name);
 {
-
+  Mix_PauseMusic();
 }
   void AudioManager::StopMusic(std::string name)
 {
